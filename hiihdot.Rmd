@@ -1,1 +1,14 @@
-testi test 
+
+
+
+Haetaan datat 
+```{r, warning=FALSE, message = FALSE}
+
+library(tidyr); 
+library(dplyr); 
+library(ggplot2);
+library(GGally)
+hiihdot <- read.csv("C:\Users\markaila\Dropbox\Hiihto-Juoksu\data\hiihdot.csv",row.names = 1)
+
+summary(hiihdot)
+```
