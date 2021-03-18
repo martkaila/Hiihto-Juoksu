@@ -1,14 +1,29 @@
 
 
 
-Haetaan datat 
-```{r, warning=FALSE, message = FALSE}
+# Hiihtotilastoja 
+
+## Kokonaismatka
+
+
+```{r echo=FALSE, , warning=FALSE, message = FALSE}
+
 
 library(tidyr); 
 library(dplyr); 
 library(ggplot2);
-library(GGally)
-hiihdot <- read.csv("C:\Users\markaila\Dropbox\Hiihto-Juoksu\data\hiihdot.csv",row.names = 1)
+library(lubridate);
 
-summary(hiihdot)
+hiihdot <- read.csv("C:/Users/markaila/Dropbox/Hiihto-Juoksu/data/hiihdot.csv")
+hiihdot$pvm <- dmy(hiihdot$date)
+
+
+figure <- hiihdot %>%
+  ggplot( aes(x=pvm, y=kokonaisMatka, group=hiihtaja, color=hiihtaja)) + theme_bw()  +
+  geom_line() +
+  geom_point()
+
+figure + theme(legend.position="bottom") + ylab("Kokonaismatka") + xlab("Päivämäärä") 
+
+
 ```
