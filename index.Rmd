@@ -1,0 +1,12 @@
+---
+title: "Hiihto- ja Juoksutilastoja"
+author: "Martti Kaila"
+date: "18 3 2021"
+output: html_document
+---
+
+***
+
+```{r child = "hiihdot.Rmd"}
+# This will include Chapter 1 (that is updated in its own file) in the document.
+```
