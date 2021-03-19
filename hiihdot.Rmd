@@ -13,17 +13,29 @@ library(tidyr);
 library(dplyr); 
 library(ggplot2);
 library(lubridate);
+library(dygraphs)
+library(xts)
 
 hiihdot <- read.csv("C:/Users/markaila/Dropbox/Hiihto-Juoksu/data/hiihdot.csv")
 hiihdot$pvm <- dmy(hiihdot$date)
 
+martti <- filter(hiihdot, hiihtaja == "Martti")
 
-figure <- hiihdot %>%
-  ggplot( aes(x=pvm, y=kokonaisMatka, group=hiihtaja, color=hiihtaja)) + theme_bw()  +
-  geom_line() +
-  geom_point()
+martti <- martti %>% select(pvm, kokonaisMatka)
 
-figure + theme(legend.position="bottom") + ylab("Kokonaismatka") + xlab("Päivämäärä") 
+don <- xts(martti[, -1], order.by = martti$pvm)
+
+p <- dygraph(don)
+p
+
+
+
+#figure <- hiihdot %>%
+# ggplot( aes(x=pvm, y=kokonaisMatka, group=hiihtaja, color=hiihtaja)) + theme_bw()  +
+##  geom_line() +
+#  geom_point()
+
+#figure + theme(legend.position="bottom") + ylab("Kokonaismatka") + xlab("Päivämäärä") 
 
 
 ```
