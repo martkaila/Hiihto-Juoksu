@@ -17,8 +17,9 @@ library(dygraphs)
 library(xts)
 library(plotly)
 
-hiihdot <- read.csv("C:/Users/markaila/Dropbox/Hiihto-Juoksu/data/hiihdot.csv")
-hiihdot$pvm <- dmy(hiihdot$date)
+hiihdot <- read.csv("C:/Users/markaila/Dropbox/tuloksia/hiihdot2.csv")
+#hiihdot$pvm <- dmy(hiihdot$date)
+hiihdot$pvm <- as.Date(hiihdot$date)
 
 
 # Plot
