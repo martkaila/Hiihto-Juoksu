@@ -62,7 +62,7 @@ library(plotly)
 theme_set(theme_bw())
 
 
-hiihdot <- read.csv("C:/Users/markaila/Dropbox/tuloksia/hiihdot2.csv")
+hiihdot <- read.csv("C:/Users/markaila/Dropbox/tuloksia/hiihdot.csv")
 #hiihdot$pvm <- dmy(hiihdot$date)
 hiihdot$pvm <- as.Date(hiihdot$date)
 
@@ -106,7 +106,7 @@ library(plotly)
 theme_set(theme_bw())
 
 
-hiihdot <- read.csv("C:/Users/markaila/Dropbox/tuloksia/hiihdot2.csv")
+hiihdot <- read.csv("C:/Users/markaila/Dropbox/tuloksia/hiihdot.csv")
 #hiihdot$pvm <- dmy(hiihdot$date)
 hiihdot$pvm <- as.Date(hiihdot$date)
 
