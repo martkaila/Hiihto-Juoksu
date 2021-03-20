@@ -23,7 +23,10 @@ hiihdot$pvm <- dmy(hiihdot$date)
 
 # Plot
 figure <- hiihdot %>%
-  ggplot( aes(x=pvm, y=kokonaisMatka, color=hiihtaja)) + theme_bw()  +
+  ggplot( aes(x=pvm, y=kokonaisMatka, color=hiihtaja, group=1,   text = paste('Hiihtäjä:', hiihtaja, 
+                                              '<br>Pvm', pvm,
+                                              '<br>Yhteensä', kokonaisMatka ))) + 
+  theme_bw()  +
   geom_line() +
   geom_point()  + theme(legend.position="bottom") + ylab("Kokonaismatka") + xlab("Päivämäärä") 
 
