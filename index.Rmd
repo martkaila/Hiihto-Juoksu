@@ -1,9 +1,21 @@
 ---
 title: "Hiihto- ja Juoksutilastoja"
-output: html_document
+output:
+  html_document:
+  toc: true
+  toc_depth: 2
+  fig_caption: true
+  fig_width: 6
+  fig_height: 4
+
 ---
 
 ***
+
+```{r child = "juoksut.Rmd"}
+# This will include Chapter 1 (that is updated in its own file) in the document.
+```
+
 
 ```{r child = "hiihdot.Rmd"}
 # This will include Chapter 1 (that is updated in its own file) in the document.
