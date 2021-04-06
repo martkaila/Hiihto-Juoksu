@@ -3,7 +3,7 @@
 
 # Hiihtotilastoja 
 
-### Kokonaismatka
+## Kokonaismatka
 
 
 ```{r echo=FALSE, , warning=FALSE, message = FALSE}
@@ -46,7 +46,7 @@ p
 
 ```
 
-### Hiihtolenkkien pituudet
+## Hiihtolenkkien pituudet
 
 ```{r echo=FALSE, , warning=FALSE, message = FALSE}
 

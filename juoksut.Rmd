@@ -3,7 +3,7 @@
 
 # Juoksutilastoja
 
-### Kokonaismatka
+## Kokonaismatka
 
 
 ```{r echo=FALSE, , warning=FALSE, message = FALSE}
@@ -46,7 +46,7 @@ p
 
 ```
 
-### Juoksulenkkien pituudet
+## Juoksulenkkien pituudet
 
 ```{r echo=FALSE, , warning=FALSE, message = FALSE}
 
@@ -90,7 +90,7 @@ p
   
 ```
 
-### Lenkkien pituuksien Jakaumat
+## Lenkkien pituuksien Jakaumat
 
 ```{r echo=FALSE, , warning=FALSE, message = FALSE}
 
