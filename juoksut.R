@@ -18,6 +18,7 @@ kinkkuJuoksu <- read_excel("C:/Users/markaila/Dropbox/tuloksia/kinkku_juoksu.xls
 #isokatinenJuoksu <- read_excel("C:/Users/markaila/Dropbox/tuloksia/isokatinen_juoksu.xlsx")
 vuohiJuoksu <- read_excel("C:/Users/markaila/Dropbox/tuloksia/vuohi_juoksu.xlsx")
 penaJuoksu <- read_excel("C:/Users/markaila/Dropbox/tuloksia/pena_juoksu.xlsx")
+tuckJuoksu <- read_excel("C:/Users/markaila/Dropbox/tuloksia/munkkituck_juoksu.xlsx")
 
 
 piuhaJuoksu <- piuhaJuoksu %>% select(date,matka,juoksija)
@@ -25,11 +26,12 @@ isopieniJuoksu <- isopieniJuoksu  %>% select(date,matka,juoksija)
 kinkkuJuoksu <- kinkkuJuoksu  %>% select(date,matka,juoksija)
 vuohiJuoksu <- vuohiJuoksu  %>% select(date,matka,juoksija)
 penaJuoksu <- penaJuoksu  %>% select(date,matka,juoksija)
+tuckJuoksu <- tuckJuoksu  %>% select(date,matka,juoksija)
 
 
 #juoksut  <- rbind(isopieniJuoksu)
 
-juoksut  <- rbind(piuhaJuoksu, isopieniJuoksu, kinkkuJuoksu, vuohiJuoksu, penaJuoksu)
+juoksut  <- rbind(piuhaJuoksu, isopieniJuoksu, kinkkuJuoksu, vuohiJuoksu, penaJuoksu, tuckJuoksu)
 
 
 juoksut <- juoksut %>% group_by(juoksija) %>% mutate(kokonaisMatka = cumsum(matka))
